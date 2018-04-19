@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>flip login</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body id="main">
+
+    <div class="flip3d">
+
+            <div id="login" class="front">
+                  <div class="grey">
+                        <h1>LOGIN</h1>
+                        <input class="txtbox " type="text" name="username" value="" placeholder="User Id"> <br>
+                        <input class="txtbox passbox" type="password" name="password" value="" placeholder="password">
+                        <div class="below">
+
+                              <span class="forgot"><em>Forgot Password ?</em></span>
+                              <div class="line"></div>
+                              <span class="btnlog">LOGIN</span>
+
+                        </div>
+                  </div>
+
+                  <div class="orange">
+                      <span><small>New User?</small> <em onclick="showRegister()">REGISTER</em> <small>Here</small></span>
+                  </div>
+            </div>
+
+  
+            <div class="back" id="register">
+                  <div class="grey">
+                        <h1 class="regi">REGISTER</h1>
+                        <input class="txtbox2 " type="text" name="username" value="" placeholder="User Id"> <br>
+                        <input class="txtbox2 passbox" type="password" name="password" value="" placeholder="password">
+
+                        <div class="belowback">
+                            <input class="txtbox2 passbox" type="password" name="password" value="" placeholder="Re-password">
+                            <div class="belowback">
+                               <span class="btnreg">REGISTER</span>
+                            </div>
+                        </div>
+          
+                  </div>
+                  <div class="orangeback">
+                    <span><small>Already Registered?</small> <em onclick="showLogin()">LOGIN</em> <small>Here</small></span>
+                  </div>
+            </div>
+
+      </div>
+  
+
+    <script>
+      function showRegister(){
+
+        document.getElementById("login").style.transform='perspective(1000px) rotateY(180deg)';
+
+         document.getElementById("register").style.transform='perspective(1000px) rotateY(0deg)';
+         
+         document.getElementById("main").style.backgroundColor='#e15848';
+      }
+
+      function showLogin(){
+
+        document.getElementById("login").style.transform='perspective(1000px) rotateY(0deg)';
+
+        document.getElementById("register").style.transform='perspective(1000px) rotateY(-180deg)';
+
+        document.getElementById("main").style.backgroundColor='teal';
+      }
+
+         
+    
+    
+    
+    </script>
+  </body>
+</html>
